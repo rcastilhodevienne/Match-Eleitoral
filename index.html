@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Eleitoral - Teste Cego</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Ecrã Inicial -->
+        <div id="tela-inicial" class="card fade-in">
+            <h1>⚖️ Match Eleitoral</h1>
+            <p>Descubra qual é o candidato que realmente o representa, sem o peso dos nomes, partidos ou preconceitos.</p>
+            <p>Vai avaliar de forma <strong>100% anónima</strong> o histórico, formação e o plano de governo para diversas áreas.</p>
+            <button class="btn-iniciar" onclick="iniciarTeste()">Começar a Avaliação</button>
+        </div>
+
+        <!-- Ecrã de Perguntas -->
+        <div id="tela-perguntas" class="card escondido">
+            <div class="progresso-container">
+                <div id="barra-progresso"></div>
+            </div>
+            <span class="tema-badge" id="tema-atual">Tema</span>
+            <h2 id="pergunta-titulo">Qual destas abordagens prefere?</h2>
+            
+            <div id="opcoes-container" class="grid-opcoes">
+                <!-- Os botões com as propostas serão injetados aqui via JS -->
+            </div>
+        </div>
+
+        <!-- Ecrã de Resultados -->
+        <div id="tela-resultado" class="card escondido fade-in text-center">
+            <h2>🎯 O seu Match Eleitoral é:</h2>
+            <div class="vencedor-box">
+                <h1 id="nome-vencedor">Candidato X</h1>
+                <p id="afinidade-vencedor" class="afinidade">0% de Afinidade</p>
+            </div>
+            
+            <h3>Resumo da sua afinidade:</h3>
+            <div id="ranking-container" class="ranking-list">
+                <!-- Ranking dos restantes candidatos -->
+            </div>
+            
+            <button class="btn-reiniciar" onclick="location.reload()">Refazer Teste</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
