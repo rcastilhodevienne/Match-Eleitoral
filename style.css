@@ -1,0 +1,45 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+
+body { background-color: #f1f5f9; color: #1e293b; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+
+.container { max-width: 600px; width: 100%; }
+
+.card { background: white; padding: 35px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+.escondido { display: none !important; }
+.text-center { text-align: center; }
+
+h1 { color: #0f172a; margin-bottom: 15px; font-size: 28px; }
+p { margin-bottom: 20px; color: #475569; line-height: 1.6; font-size: 16px; }
+h2 { color: #1e293b; margin-bottom: 25px; font-size: 22px; }
+
+/* Botões Iniciais */
+.btn-iniciar, .btn-reiniciar {
+    background-color: #2563eb; color: white; border: none; padding: 16px 30px;
+    border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.2s; width: 100%;
+}
+.btn-iniciar:hover, .btn-reiniciar:hover { background-color: #1d4ed8; }
+
+/* Progresso e Badges */
+.progresso-container { width: 100%; height: 8px; background-color: #e2e8f0; border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
+#barra-progresso { height: 100%; background-color: #2563eb; width: 0%; transition: width 0.3s; }
+.tema-badge { background-color: #dbeafe; color: #1e40af; padding: 6px 12px; border-radius: 20px; font-size: 14px; font-weight: bold; display: inline-block; margin-bottom: 15px; text-transform: uppercase; }
+
+/* Opções de Propostas */
+.grid-opcoes { display: flex; flex-direction: column; gap: 15px; }
+.proposta-btn {
+    background: #f8fafc; border: 2px solid #e2e8f0; padding: 20px; border-radius: 12px;
+    text-align: left; font-size: 15px; color: #334155; line-height: 1.5; cursor: pointer; transition: all 0.2s;
+}
+.proposta-btn:hover { border-color: #2563eb; background: #f0fdfa; transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
+/* Resultados */
+.vencedor-box { background: #f0fdfa; border: 2px solid #14b8a6; padding: 30px; border-radius: 16px; margin-bottom: 30px; }
+#nome-vencedor { color: #0f766e; font-size: 32px; margin-bottom: 5px; }
+.afinidade { font-size: 20px; font-weight: bold; color: #0d9488; }
+
+.ranking-list { text-align: left; margin-bottom: 30px; }
+.ranking-item { display: flex; justify-content: space-between; padding: 12px 15px; border-bottom: 1px solid #e2e8f0; font-size: 16px; }
+.ranking-item:last-child { border-bottom: none; }
+
+.fade-in { animation: fadeIn 0.4s ease-in; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
